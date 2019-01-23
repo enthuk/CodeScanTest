@@ -1,0 +1,50 @@
+<apex:page standardController="Account">
+        <apex:includeLightning />
+    <style>
+        html, body {
+        margin: 0;
+        padding: 0;
+        }
+        #lightningComponent {width: 100%;}
+    </style>
+
+    <div id="content">
+        <div id="lightningComponent" />
+        <div id="uiMessage"/>
+        <div id="newContactLDS"/>
+        <script>
+             $Lightning.use("c:DependencyApp", function() {
+                 $Lightning.createComponent("c:SmartComponent",
+                 { 
+                 label : "SmartComponent"
+                 },
+                 "lightningComponent",
+                 function(cmp) {
+                     console.log('SmartComponent created, do something cool here');
+                 });
+                 
+                 $Lightning.createComponent("c:uiMessage",
+                 { 
+                 label : "uiMessage"
+                 },
+                 "uiMessage",
+                 function(cmp) {
+                     console.log('uiMessage created, do something cool here');
+                 });
+                 
+                 $Lightning.createComponent("c:newContactLDS",
+                 { 
+                 label : "newContactLDS"
+                 },
+                 "newContactLDS",
+                 function(cmp) {
+                     console.log('newContactLDS created, do something cool here');
+                 });
+                 
+             });
+
+        </script>        
+        
+    </div>
+    
+</apex:page>

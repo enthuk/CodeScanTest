@@ -1,0 +1,21 @@
+<apex:page standardController="Account" lightningStylesheets="true">
+    <apex:pageMessages />
+    <apex:form >
+
+    <apex:pageBlock mode="maindetail">
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!Save}" value="Save" />
+                    <apex:commandButton action="{!Cancel}" value="Cancel" />
+                </apex:pageBlockButtons>
+            
+                <apex:pageBlockSection >
+                    <apex:inputField value="{!account.Name}" />
+                    <apex:inputField value="{!account.Type}"/>
+                    <apex:inputField value="{!account.Phone}" />
+                    <apex:inputField value="{!account.AccountNumber}"/>                       
+                </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

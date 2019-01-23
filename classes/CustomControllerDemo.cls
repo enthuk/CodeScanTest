@@ -1,4 +1,4 @@
-// Just added some text for CI Integration test
+// Just added some text for CI Integration test. Changed 23-Jan-19 15:48
 public class CustomControllerDemo {
     @AuraEnabled
     public static List<PricebookEntry> getProducts(ID priceBookId) {

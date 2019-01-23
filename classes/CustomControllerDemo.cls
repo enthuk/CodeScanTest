@@ -1,5 +1,6 @@
+// Just added some text for CI Integration test
 public class CustomControllerDemo {
-	@AuraEnabled
+    @AuraEnabled
     public static List<PricebookEntry> getProducts(ID priceBookId) {
         // Want to test validation rule for inactive products
         /* return [SELECT Id, Name, ProductCode, UnitPrice 
@@ -16,7 +17,7 @@ public class CustomControllerDemo {
     @AuraEnabled
     public static List<OpportunityLineItem> getOpportunityLineItems(ID OpportunityId) {
         return [SELECT Id, Name, PricebookEntryId, OpportunityId, ListPrice, ProductCode, Quantity, 
-                			  TotalPrice, UnitPrice, Contract_Type__c
+                              TotalPrice, UnitPrice, Contract_Type__c
                 FROM OpportunityLineItem 
                 WHERE OpportunityId = :OpportunityId];
     }
